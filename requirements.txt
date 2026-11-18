@@ -1,0 +1,18 @@
+# EcoSort — dependências (Python 3.10+). Versões testadas em 2026-11 (Windows, CPU).
+# Para instalar o PyTorch só-CPU (bem menor):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+torchvision>=0.17
+scikit-learn>=1.4
+pandas>=2.0
+numpy>=1.26
+matplotlib>=3.8
+pillow>=10.0
+requests>=2.31
+streamlit>=1.40
+pytest>=8.0
+tabulate>=0.9
+# Opcional (notebooks)
+nbformat>=5.9
+nbconvert>=7.0
+ipykernel>=6.0

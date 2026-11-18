@@ -1,0 +1,21 @@
+# Ambientes / caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+.env
+
+# Dataset bruto (baixado por src/visao_computacional/preparar_dados.py)
+dados/bruto/
+
+# Modelos grandes (>100MB). Os modelos do EcoSort têm ~9MB e ~0.1MB e PODEM ser versionados.
+modelos/*.ckpt
+modelos/*_grande*
+
+# Artigo (artefatos de compilação LaTeX)
+artigo/*.aux
+artigo/*.log
+artigo/*.out

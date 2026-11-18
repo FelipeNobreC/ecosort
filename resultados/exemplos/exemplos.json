@@ -1,0 +1,520 @@
+[
+  {
+    "pergunta": "como descarto isso?",
+    "visao": {
+      "classe": "cardboard",
+      "confianca": 0.9944394826889038,
+      "top2": [
+        [
+          "cardboard",
+          0.9944394826889038
+        ],
+        [
+          "trash",
+          0.002504870994016528
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "como_descartar",
+      "confianca": 0.8934410246933772
+    },
+    "decisao": {
+      "regra_id": "R10",
+      "regra_descricao": "SE classe=cardboard E intenção=como_descartar E confiança>=0.60 ENTÃO resposta 'como_descartar' para 'cardboard'",
+      "resposta": "Isso parece ser **papelão**. Descarte na lixeira AZUL (papel) da coleta seletiva, junto com outros papéis secos.",
+      "classe_considerada": "cardboard",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 1,
+    "descricao": "Acerto, alta confiança — como descartar",
+    "imagem": "imagens/01_cardboard37.jpg",
+    "classe_real": "cardboard"
+  },
+  {
+    "pergunta": "precisa lavar antes?",
+    "visao": {
+      "classe": "glass",
+      "confianca": 0.9901897311210632,
+      "top2": [
+        [
+          "glass",
+          0.9901897311210632
+        ],
+        [
+          "cardboard",
+          0.004070368129760027
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "preparo_antes",
+      "confianca": 0.9483283515161927
+    },
+    "decisao": {
+      "regra_id": "R17",
+      "regra_descricao": "SE classe=glass E intenção=preparo_antes E confiança>=0.60 ENTÃO resposta 'preparo_antes' para 'glass'",
+      "resposta": "Antes de descartar **vidro**:\n- Enxágue para retirar restos de bebida/alimento (não precisa ficar perfeito).\n- Retire tampas metálicas ou plásticas e descarte-as em suas lixeiras (amarela/vermelha).\n- Vidro quebrado: embrulhe em jornal ou coloque numa caixa e identifique 'VIDRO QUEBRADO' para proteger os coletores.",
+      "classe_considerada": "glass",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 2,
+    "descricao": "Acerto, alta confiança — preparo",
+    "imagem": "imagens/02_glass259.jpg",
+    "classe_real": "glass"
+  },
+  {
+    "pergunta": "onde posso levar?",
+    "visao": {
+      "classe": "metal",
+      "confianca": 0.9843676686286926,
+      "top2": [
+        [
+          "metal",
+          0.9843676686286926
+        ],
+        [
+          "trash",
+          0.010596961714327335
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "onde_levar",
+      "confianca": 0.905462677076307
+    },
+    "decisao": {
+      "regra_id": "R20",
+      "regra_descricao": "SE classe=metal E intenção=onde_levar E confiança>=0.60 ENTÃO resposta 'onde_levar' para 'metal'",
+      "resposta": "Para **metal**: Coleta seletiva, ecopontos, cooperativas e ferros-velhos/sucateiros (latinhas de alumínio têm alto valor de revenda).",
+      "classe_considerada": "metal",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 3,
+    "descricao": "Acerto, alta confiança — onde levar",
+    "imagem": "imagens/03_metal388.jpg",
+    "classe_real": "metal"
+  },
+  {
+    "pergunta": "isso é reciclável?",
+    "visao": {
+      "classe": "plastic",
+      "confianca": 0.9923211932182312,
+      "top2": [
+        [
+          "plastic",
+          0.9923211932182312
+        ],
+        [
+          "paper",
+          0.0032412593718618155
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "e_reciclavel",
+      "confianca": 0.9729420582954138
+    },
+    "decisao": {
+      "regra_id": "R27",
+      "regra_descricao": "SE classe=plastic E intenção=e_reciclavel E confiança>=0.60 ENTÃO resposta 'e_reciclavel' para 'plastic'",
+      "resposta": "Sim! **Plástico** é reciclável. Coloque na lixeira **VERMELHA**. Verifique o símbolo de reciclagem (1 a 7) na embalagem para identificar o tipo de plástico.",
+      "classe_considerada": "plastic",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 4,
+    "descricao": "Acerto, alta confiança — é reciclável",
+    "imagem": "imagens/04_plastic405.jpg",
+    "classe_real": "plastic"
+  },
+  {
+    "pergunta": "da pra reciclar isso?",
+    "visao": {
+      "classe": "trash",
+      "confianca": 0.997583270072937,
+      "top2": [
+        [
+          "trash",
+          0.997583270072937
+        ],
+        [
+          "paper",
+          0.0017589264316484332
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "e_reciclavel",
+      "confianca": 0.831961744105786
+    },
+    "decisao": {
+      "regra_id": "R31",
+      "regra_descricao": "SE classe=trash E intenção=e_reciclavel E confiança>=0.60 ENTÃO resposta 'e_reciclavel' para 'trash'",
+      "resposta": "Não. Isso parece ser **rejeito (lixo não reciclável)**, que não tem reciclagem viável. Descarte na lixeira **CINZA** (rejeito). Rejeitos não têm reaproveitamento viável; reduzir o consumo é a melhor estratégia.",
+      "classe_considerada": "trash",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 5,
+    "descricao": "Acerto, classe rejeito (não reciclável)",
+    "imagem": "imagens/05_trash74.jpg",
+    "classe_real": "trash"
+  },
+  {
+    "pergunta": "presisa lava antes?",
+    "visao": {
+      "classe": "paper",
+      "confianca": 0.9762622117996216,
+      "top2": [
+        [
+          "paper",
+          0.9762622117996216
+        ],
+        [
+          "trash",
+          0.013391664251685143
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "preparo_antes",
+      "confianca": 0.6909224447270874
+    },
+    "decisao": {
+      "regra_id": "R25",
+      "regra_descricao": "SE classe=paper E intenção=preparo_antes E confiança>=0.60 ENTÃO resposta 'preparo_antes' para 'paper'",
+      "resposta": "Antes de descartar **papel**:\n- Não precisa lavar; apenas mantenha o papel limpo e seco.\n- Não amasse em bolinhas: prefira dobrar ou deixar plano.\n- Papel higiênico, guardanapo usado, papel carbono, fotos e papel plastificado NÃO são recicláveis (vão para o rejeito).",
+      "classe_considerada": "paper",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 6,
+    "descricao": "Pergunta com erros de digitação",
+    "imagem": "imagens/06_paper157.jpg",
+    "classe_real": "paper"
+  },
+  {
+    "pergunta": "como descarto isso?",
+    "visao": {
+      "classe": "plastic",
+      "confianca": 0.8256911039352417,
+      "top2": [
+        [
+          "plastic",
+          0.8256911039352417
+        ],
+        [
+          "glass",
+          0.09890301525592804
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "como_descartar",
+      "confianca": 0.8934410246933772
+    },
+    "decisao": {
+      "regra_id": "R26",
+      "regra_descricao": "SE classe=plastic E intenção=como_descartar E confiança>=0.60 ENTÃO resposta 'como_descartar' para 'plastic'",
+      "resposta": "Isso parece ser **plástico**. Descarte na lixeira VERMELHA (plástico) da coleta seletiva.",
+      "classe_considerada": "plastic",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 7,
+    "descricao": "ERRO da visão com confiança alta (glass→plastic)",
+    "imagem": "imagens/07_glass55.jpg",
+    "classe_real": "glass"
+  },
+  {
+    "pergunta": "como descarto isso?",
+    "visao": {
+      "classe": "paper",
+      "confianca": 0.7447745203971863,
+      "top2": [
+        [
+          "paper",
+          0.7447745203971863
+        ],
+        [
+          "cardboard",
+          0.12450293451547623
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "como_descartar",
+      "confianca": 0.8934410246933772
+    },
+    "decisao": {
+      "regra_id": "R22",
+      "regra_descricao": "SE classe=paper E intenção=como_descartar E confiança>=0.60 ENTÃO resposta 'como_descartar' para 'paper'",
+      "resposta": "Isso parece ser **papel**. Descarte na lixeira AZUL (papel) da coleta seletiva.",
+      "classe_considerada": "paper",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 8,
+    "descricao": "ERRO da visão com confiança alta (cardboard→paper)",
+    "imagem": "imagens/08_cardboard294.jpg",
+    "classe_real": "cardboard"
+  },
+  {
+    "pergunta": "isso é reciclável?",
+    "visao": {
+      "classe": "glass",
+      "confianca": 0.5975911617279053,
+      "top2": [
+        [
+          "glass",
+          0.5975911617279053
+        ],
+        [
+          "cardboard",
+          0.13054926693439484
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "e_reciclavel",
+      "confianca": 0.9729420582954138
+    },
+    "decisao": {
+      "regra_id": "R04",
+      "regra_descricao": "SE confiança_visão<0.60 E lixeiras diferentes ENTÃO mostrar top-2 e pedir nova foto",
+      "resposta": "Fiquei em dúvida entre duas opções (confiança abaixo de 60%):\n\n**1) Vidro (60%)** — Sim! **Vidro** é reciclável. Coloque na lixeira **VERDE**. O vidro é 100% reciclável infinitas vezes, sem perda de qualidade.\n\n**2) Papelão (13%)** — Sim! **Papelão** é reciclável. Coloque na lixeira **AZUL**. O papelão é um dos materiais mais valorizados pelas cooperativas.\n\nSe puder, envie outra foto para eu confirmar.",
+      "classe_considerada": null,
+      "precisa_nova_foto": true,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 9,
+    "descricao": "Baixa confiança, lixeiras diferentes (top-2)",
+    "imagem": "imagens/09_glass401.jpg",
+    "classe_real": "glass"
+  },
+  {
+    "pergunta": "como descarto isso?",
+    "visao": {
+      "classe": "cardboard",
+      "confianca": 0.3642231822013855,
+      "top2": [
+        [
+          "cardboard",
+          0.3642231822013855
+        ],
+        [
+          "paper",
+          0.33670297265052795
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "como_descartar",
+      "confianca": 0.8934410246933772
+    },
+    "decisao": {
+      "regra_id": "R03",
+      "regra_descricao": "SE confiança_visão<0.60 E lixeira(top1)=lixeira(top2) ENTÃO responder pelo grupo comum",
+      "resposta": "Não tenho certeza se é **papelão** (36%) ou **papel** (34%), mas os dois vão para a lixeira **AZUL**, então a orientação é a mesma.\n\nIsso parece ser **papelão**. Descarte na lixeira AZUL (papel) da coleta seletiva, junto com outros papéis secos.",
+      "classe_considerada": "cardboard",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 10,
+    "descricao": "Baixa confiança, mas top-2 com mesma lixeira",
+    "imagem": "imagens/10_paper471.jpg",
+    "classe_real": "paper"
+  },
+  {
+    "pergunta": "como descarto isso?",
+    "visao": {
+      "classe": "plastic",
+      "confianca": 0.2869432866573334,
+      "top2": [
+        [
+          "plastic",
+          0.2869432866573334
+        ],
+        [
+          "metal",
+          0.2862597107887268
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "como_descartar",
+      "confianca": 0.8934410246933772
+    },
+    "decisao": {
+      "regra_id": "R02",
+      "regra_descricao": "SE confiança_visão<0.35 ENTÃO pedir nova foto",
+      "resposta": "Não consegui identificar o material com segurança (confiança de 29%). Envie outra foto com o objeto sozinho, bem iluminado e sobre um fundo neutro.",
+      "classe_considerada": null,
+      "precisa_nova_foto": true,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 11,
+    "descricao": "Confiança muito baixa — pede nova foto",
+    "imagem": "imagens/11_plastic441.jpg",
+    "classe_real": "plastic"
+  },
+  {
+    "pergunta": "qual a previsão do tempo hoje?",
+    "visao": {
+      "classe": "metal",
+      "confianca": 0.8748497366905212,
+      "top2": [
+        [
+          "metal",
+          0.8748497366905212
+        ],
+        [
+          "cardboard",
+          0.06368997693061829
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "fora_do_escopo",
+      "confianca": 0.714689967803125
+    },
+    "decisao": {
+      "regra_id": "R01",
+      "regra_descricao": "SE intenção=fora_do_escopo E confiança_pln>=0.40 ENTÃO explicar o escopo",
+      "resposta": "Sou o EcoSort e só consigo ajudar com o descarte de resíduos. Pergunte, por exemplo: *como descarto isso?*, *isso é reciclável?*, *onde posso levar?* ou *precisa lavar antes?*",
+      "classe_considerada": null,
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 12,
+    "descricao": "Pergunta fora do escopo",
+    "imagem": "imagens/12_metal399.jpg",
+    "classe_real": "metal"
+  },
+  {
+    "pergunta": "mano essa parada vai em qual lixo?",
+    "visao": {
+      "classe": "cardboard",
+      "confianca": 0.9756233096122742,
+      "top2": [
+        [
+          "cardboard",
+          0.9756233096122742
+        ],
+        [
+          "trash",
+          0.009820559993386269
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "como_descartar",
+      "confianca": 0.8067621153580247
+    },
+    "decisao": {
+      "regra_id": "R10",
+      "regra_descricao": "SE classe=cardboard E intenção=como_descartar E confiança>=0.60 ENTÃO resposta 'como_descartar' para 'cardboard'",
+      "resposta": "Isso parece ser **papelão**. Descarte na lixeira AZUL (papel) da coleta seletiva, junto com outros papéis secos.",
+      "classe_considerada": "cardboard",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 13,
+    "descricao": "Gíria/informal",
+    "imagem": "imagens/13_cardboard365.jpg",
+    "classe_real": "cardboard"
+  },
+  {
+    "pergunta": "me explica esse item",
+    "visao": {
+      "classe": "glass",
+      "confianca": 0.8646791577339172,
+      "top2": [
+        [
+          "glass",
+          0.8646791577339172
+        ],
+        [
+          "trash",
+          0.06129813939332962
+        ]
+      ]
+    },
+    "pln": {
+      "intencao": "e_reciclavel",
+      "confianca": 0.32851313629660644
+    },
+    "decisao": {
+      "regra_id": "R05",
+      "regra_descricao": "SE confiança_pln<0.40 ENTÃO resumo geral do material",
+      "resposta": "Não entendi bem a pergunta, então aqui vai um resumo sobre **vidro**:\n\n- **Reciclável?** Sim\n- **Lixeira:** VERDE\n- **Preparo:** Enxágue para retirar restos de bebida/alimento (não precisa ficar perfeito).\n- **Destino:** Contêineres de vidro (PEVs) em supermercados e praças, ecopontos e cooperativas. Espelhos, lâmpadas e vidros temperados/de janela NÃO entram na reciclagem comum.\n\nSe quiser algo específico, pergunte por exemplo *precisa lavar antes?*",
+      "classe_considerada": "glass",
+      "precisa_nova_foto": false,
+      "detalhes": {
+        "limiar_visao": 0.6,
+        "limiar_minimo_visao": 0.35,
+        "limiar_pln": 0.4
+      }
+    },
+    "caso": 14,
+    "descricao": "Pergunta ambígua (intenção incerta)",
+    "imagem": "imagens/14_glass473.jpg",
+    "classe_real": "glass"
+  }
+]

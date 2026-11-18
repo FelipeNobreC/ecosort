@@ -1,0 +1,32 @@
+Downloading: "https://download.pytorch.org/models/mobilenet_v2-b0353104.pth" to <cache_torch>
+
+  0%|          | 0.00/13.6M [00:00<?, ?B/s]
+  7%|▋         | 1.00M/13.6M [00:00<00:01, 10.1MB/s]
+ 57%|█████▋    | 7.75M/13.6M [00:00<00:00, 44.7MB/s]
+ 89%|████████▉ | 12.1M/13.6M [00:00<00:00, 21.6MB/s]
+100%|██████████| 13.6M/13.6M [00:00<00:00, 25.3MB/s]
+[cabeça] época 01 | loss 1.4202 acc 0.5226 | val_loss 1.1954 val_acc 0.6992 | 86s
+[cabeça] época 02 | loss 1.0960 acc 0.7183 | val_loss 1.0931 val_acc 0.7493 | 24s
+[cabeça] época 03 | loss 1.0208 acc 0.7517 | val_loss 1.1064 val_acc 0.7361 | 24s
+[cabeça] época 04 | loss 0.9753 acc 0.7845 | val_loss 1.0428 val_acc 0.7361 | 24s
+[cabeça] época 05 | loss 0.9531 acc 0.7930 | val_loss 1.0110 val_acc 0.7625 | 22s
+[cabeça] época 06 | loss 0.9494 acc 0.7851 | val_loss 0.9667 val_acc 0.7942 | 23s
+[fine-tuning] época 07 | loss 1.0381 acc 0.7602 | val_loss 0.9849 val_acc 0.7784 | 32s
+[fine-tuning] época 08 | loss 0.8775 acc 0.8292 | val_loss 0.9493 val_acc 0.8153 | 32s
+[fine-tuning] época 09 | loss 0.8131 acc 0.8643 | val_loss 0.8830 val_acc 0.8153 | 33s
+[fine-tuning] época 10 | loss 0.7678 acc 0.8954 | val_loss 0.8554 val_acc 0.8338 | 32s
+[fine-tuning] época 11 | loss 0.7413 acc 0.9112 | val_loss 0.8518 val_acc 0.8443 | 33s
+[fine-tuning] época 12 | loss 0.7057 acc 0.9321 | val_loss 0.8376 val_acc 0.8575 | 32s
+[fine-tuning] época 13 | loss 0.7095 acc 0.9270 | val_loss 0.8258 val_acc 0.8628 | 34s
+[fine-tuning] época 14 | loss 0.6864 acc 0.9434 | val_loss 0.8151 val_acc 0.8734 | 32s
+[fine-tuning] época 15 | loss 0.6986 acc 0.9338 | val_loss 0.8196 val_acc 0.8813 | 32s
+[fine-tuning] época 16 | loss 0.6859 acc 0.9440 | val_loss 0.8184 val_acc 0.8865 | 31s
+Modelo salvo em <raiz_do_projeto>\modelos\visao_mobilenetv2.pt (melhor val_acc=0.8865)
+
+TESTE: acurácia=0.8684  F1 macro=0.8461
+  cardboard  P=0.929 R=0.867 F1=0.897 n=60
+  glass      P=0.882 R=0.882 F1=0.882 n=76
+  metal      P=0.862 R=0.903 F1=0.882 n=62
+  paper      P=0.885 R=0.865 F1=0.875 n=89
+  plastic    P=0.887 R=0.863 F1=0.875 n=73
+  trash      P=0.600 R=0.750 F1=0.667 n=20

@@ -1,0 +1,283 @@
+{
+  "regressao_logistica": {
+    "acuracia": 0.8431372549019608,
+    "f1_macro": 0.8400000000000001,
+    "por_classe": {
+      "como_descartar": {
+        "precision": 0.8461538461538461,
+        "recall": 1.0,
+        "f1-score": 0.9166666666666666,
+        "support": 11.0
+      },
+      "e_reciclavel": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "onde_levar": {
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1-score": 0.8333333333333334,
+        "support": 10.0
+      },
+      "preparo_antes": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 9.0
+      },
+      "fora_do_escopo": {
+        "precision": 0.7777777777777778,
+        "recall": 0.6363636363636364,
+        "f1-score": 0.7,
+        "support": 11.0
+      }
+    },
+    "matriz_confusao": [
+      [
+        11,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        2,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        9,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        0,
+        7
+      ]
+    ],
+    "hiperparametro": 3.0,
+    "f1_val_por_hiperparametro": {
+      "0.1": 0.767251461988304,
+      "1.0": 0.8407177363699102,
+      "3.0": 0.8610769347611452,
+      "10.0": 0.8416809286643719,
+      "30.0": 0.8416809286643719,
+      "100.0": 0.8416809286643719
+    },
+    "cv5_acuracia_media": 0.8328358208955224,
+    "cv5_acuracia_desvio": 0.04662835627406959,
+    "cv5_f1_macro_media": 0.8300769398576261,
+    "cv5_f1_macro_desvio": 0.048616605672135924,
+    "erros_teste": [
+      {
+        "texto": "entra na coleta seletiva?",
+        "real": "e_reciclavel",
+        "predito": "onde_levar"
+      },
+      {
+        "texto": "isso e recilavel?",
+        "real": "e_reciclavel",
+        "predito": "fora_do_escopo"
+      },
+      {
+        "texto": "onde fica a praia mais bonita?",
+        "real": "fora_do_escopo",
+        "predito": "onde_levar"
+      },
+      {
+        "texto": "vai chover amanhã?",
+        "real": "fora_do_escopo",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "onde fica o hospital mais próximo?",
+        "real": "fora_do_escopo",
+        "predito": "onde_levar"
+      },
+      {
+        "texto": "isso é rejeito?",
+        "real": "e_reciclavel",
+        "predito": "fora_do_escopo"
+      },
+      {
+        "texto": "quem ganhou o jogo ontem?",
+        "real": "fora_do_escopo",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "isso é aceito na coleta seletiva?",
+        "real": "e_reciclavel",
+        "predito": "onde_levar"
+      }
+    ]
+  },
+  "naive_bayes": {
+    "acuracia": 0.7450980392156863,
+    "f1_macro": 0.7364811711791163,
+    "por_classe": {
+      "como_descartar": {
+        "precision": 0.6111111111111112,
+        "recall": 1.0,
+        "f1-score": 0.7586206896551724,
+        "support": 11.0
+      },
+      "e_reciclavel": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "onde_levar": {
+        "precision": 0.6923076923076923,
+        "recall": 0.9,
+        "f1-score": 0.782608695652174,
+        "support": 10.0
+      },
+      "preparo_antes": {
+        "precision": 1.0,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.9411764705882353,
+        "support": 9.0
+      },
+      "fora_do_escopo": {
+        "precision": 1.0,
+        "recall": 0.36363636363636365,
+        "f1-score": 0.5333333333333333,
+        "support": 11.0
+      }
+    },
+    "matriz_confusao": [
+      [
+        11,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        6,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        9,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        8,
+        0
+      ],
+      [
+        5,
+        0,
+        2,
+        0,
+        4
+      ]
+    ],
+    "hiperparametro": 0.5,
+    "f1_val_por_hiperparametro": {
+      "0.01": 0.6722455648926238,
+      "0.05": 0.7096170533861536,
+      "0.1": 0.7231235468926471,
+      "0.3": 0.7231235468926471,
+      "0.5": 0.7286150983519405,
+      "1.0": 0.7286150983519405
+    },
+    "cv5_acuracia_media": 0.7522388059701492,
+    "cv5_acuracia_desvio": 0.03073322430145374,
+    "cv5_f1_macro_media": 0.7319684495244949,
+    "cv5_f1_macro_desvio": 0.03783560756862155,
+    "erros_teste": [
+      {
+        "texto": "kkkkkk",
+        "real": "fora_do_escopo",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "entra na coleta seletiva?",
+        "real": "e_reciclavel",
+        "predito": "onde_levar"
+      },
+      {
+        "texto": "alguém recolhe isso?",
+        "real": "onde_levar",
+        "predito": "e_reciclavel"
+      },
+      {
+        "texto": "isso e recilavel?",
+        "real": "e_reciclavel",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "onde fica a praia mais bonita?",
+        "real": "fora_do_escopo",
+        "predito": "onde_levar"
+      },
+      {
+        "texto": "vai chover amanhã?",
+        "real": "fora_do_escopo",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "me recomenda um filme",
+        "real": "fora_do_escopo",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "onde fica o hospital mais próximo?",
+        "real": "fora_do_escopo",
+        "predito": "onde_levar"
+      },
+      {
+        "texto": "tô com fome",
+        "real": "fora_do_escopo",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "isso é rejeito?",
+        "real": "e_reciclavel",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "desmonto o papelão?",
+        "real": "preparo_antes",
+        "predito": "e_reciclavel"
+      },
+      {
+        "texto": "quem ganhou o jogo ontem?",
+        "real": "fora_do_escopo",
+        "predito": "como_descartar"
+      },
+      {
+        "texto": "isso é aceito na coleta seletiva?",
+        "real": "e_reciclavel",
+        "predito": "onde_levar"
+      }
+    ]
+  }
+}

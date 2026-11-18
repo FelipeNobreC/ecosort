@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "descricao": "Base de conhecimento do EcoSort: regras de descarte por material, segundo o padrão de cores da coleta seletiva brasileira (Resolução CONAMA nº 275/2001).",
+    "limiar_confianca_visao": 0.6,
+    "limiar_confianca_minima_visao": 0.35,
+    "limiar_confianca_pln": 0.4,
+    "cores_coleta_seletiva": {
+      "papel": "azul",
+      "plastico": "vermelho",
+      "vidro": "verde",
+      "metal": "amarelo",
+      "organico": "marrom",
+      "rejeito": "cinza"
+    }
+  },
+  "materiais": {
+    "cardboard": {
+      "nome_pt": "papelão",
+      "grupo": "papel",
+      "reciclavel": true,
+      "lixeira_cor": "azul",
+      "como_descartar": "Descarte na lixeira AZUL (papel) da coleta seletiva, junto com outros papéis secos.",
+      "preparo": [
+        "Desmonte e achate as caixas para ocupar menos espaço.",
+        "Retire fitas adesivas, grampos e restos de isopor/plástico.",
+        "Mantenha seco: papelão molhado ou engordurado (ex.: fundo de caixa de pizza) vai para o rejeito."
+      ],
+      "destino": "Cooperativas de catadores, Pontos de Entrega Voluntária (PEVs/ecopontos) ou a coleta seletiva da prefeitura. Grandes volumes costumam ser comprados por aparistas e depósitos de reciclagem.",
+      "observacao": "O papelão é um dos materiais mais valorizados pelas cooperativas."
+    },
+    "paper": {
+      "nome_pt": "papel",
+      "grupo": "papel",
+      "reciclavel": true,
+      "lixeira_cor": "azul",
+      "como_descartar": "Descarte na lixeira AZUL (papel) da coleta seletiva.",
+      "preparo": [
+        "Não precisa lavar; apenas mantenha o papel limpo e seco.",
+        "Não amasse em bolinhas: prefira dobrar ou deixar plano.",
+        "Papel higiênico, guardanapo usado, papel carbono, fotos e papel plastificado NÃO são recicláveis (vão para o rejeito)."
+      ],
+      "destino": "Coleta seletiva municipal, PEVs/ecopontos, cooperativas de catadores ou caixas coletoras de escolas e empresas.",
+      "observacao": "Papel picado pode ser reciclado, mas é melhor ensacá-lo para não espalhar."
+    },
+    "glass": {
+      "nome_pt": "vidro",
+      "grupo": "vidro",
+      "reciclavel": true,
+      "lixeira_cor": "verde",
+      "como_descartar": "Descarte na lixeira VERDE (vidro) da coleta seletiva.",
+      "preparo": [
+        "Enxágue para retirar restos de bebida/alimento (não precisa ficar perfeito).",
+        "Retire tampas metálicas ou plásticas e descarte-as em suas lixeiras (amarela/vermelha).",
+        "Vidro quebrado: embrulhe em jornal ou coloque numa caixa e identifique 'VIDRO QUEBRADO' para proteger os coletores."
+      ],
+      "destino": "Contêineres de vidro (PEVs) em supermercados e praças, ecopontos e cooperativas. Espelhos, lâmpadas e vidros temperados/de janela NÃO entram na reciclagem comum.",
+      "observacao": "O vidro é 100% reciclável infinitas vezes, sem perda de qualidade."
+    },
+    "metal": {
+      "nome_pt": "metal",
+      "grupo": "metal",
+      "reciclavel": true,
+      "lixeira_cor": "amarela",
+      "como_descartar": "Descarte na lixeira AMARELA (metal) da coleta seletiva.",
+      "preparo": [
+        "Enxágue latas de alimentos e bebidas para retirar resíduos.",
+        "Amasse as latas de alumínio para reduzir o volume.",
+        "Aerossóis devem estar totalmente vazios; pilhas e baterias NÃO vão aqui (têm logística reversa própria)."
+      ],
+      "destino": "Coleta seletiva, ecopontos, cooperativas e ferros-velhos/sucateiros (latinhas de alumínio têm alto valor de revenda).",
+      "observacao": "A lata de alumínio é um dos materiais com maior índice de reciclagem no Brasil."
+    },
+    "plastic": {
+      "nome_pt": "plástico",
+      "grupo": "plastico",
+      "reciclavel": true,
+      "lixeira_cor": "vermelha",
+      "como_descartar": "Descarte na lixeira VERMELHA (plástico) da coleta seletiva.",
+      "preparo": [
+        "Esvazie e enxágue embalagens com restos de alimento ou produto.",
+        "Amasse garrafas PET para reduzir o volume (pode manter a tampa rosqueada).",
+        "Embalagens metalizadas (ex.: salgadinho) e plásticos muito sujos/engordurados geralmente vão para o rejeito."
+      ],
+      "destino": "Coleta seletiva, ecopontos, cooperativas e PEVs de supermercados. Isopor (EPS) é reciclável, mas poucas cooperativas aceitam — confirme no local.",
+      "observacao": "Verifique o símbolo de reciclagem (1 a 7) na embalagem para identificar o tipo de plástico."
+    },
+    "trash": {
+      "nome_pt": "rejeito (lixo não reciclável)",
+      "grupo": "rejeito",
+      "reciclavel": false,
+      "lixeira_cor": "cinza",
+      "como_descartar": "Descarte na lixeira CINZA (rejeito/não reciclável) ou no lixo comum, bem ensacado.",
+      "preparo": [
+        "Não precisa lavar, pois não vai para reciclagem.",
+        "Ensaque bem e feche o saco para evitar vazamentos e contato dos coletores com o material.",
+        "Se houver partes recicláveis (ex.: embalagem limpa), separe-as antes."
+      ],
+      "destino": "Coleta regular de lixo da prefeitura (aterro sanitário). Itens especiais como pilhas, eletrônicos, lâmpadas e remédios têm pontos de logística reversa (lojas, farmácias, ecopontos).",
+      "observacao": "Rejeitos não têm reaproveitamento viável; reduzir o consumo é a melhor estratégia."
+    }
+  }
+}
