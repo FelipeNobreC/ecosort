@@ -7,11 +7,15 @@ Projeto final da disciplina de **Inteligência Artificial — AFYA/UNIMA**.
 ## Integrantes
 | Nome completo | Matrícula | Responsabilidades |
 |---|---|---|
-| `<Nome completo 1>` | `<matrícula>` | `<ex.: Visão computacional — dados, treino e avaliação da MobileNetV2>` |
-| `<Nome completo 2>` | `<matrícula>` | `<ex.: PLN — dataset de intenções, pré-processamento e modelos>` |
-| `<Nome completo 3>` | `<matrícula>` | `<ex.: Módulo de decisão — base de conhecimento e regras>` |
-| `<Nome completo 4>` | `<matrícula>` | `<ex.: Integração, app Streamlit e testes>` |
-| `<Nome completo 5>` | `<matrícula>` | `<ex.: Experimentos, análise de erros e artigo>` |
+| Nícollas Inácio Santos Ferreira | `<matrícula>` | `<a definir>` |
+| Jhuze Victhor Alves Sarmento | `<matrícula>` | `<a definir>` |
+| Maria Júlia Feitosa | `<matrícula>` | `<a definir>` |
+| Gabriela Vilela Berto | `<matrícula>` | `<a definir>` |
+| Felipe José Nobre Carlos | `<matrícula>` | `<a definir>` |
+
+> Frentes de trabalho do projeto, para distribuir nas responsabilidades: visão computacional (dados, treino e
+> avaliação da MobileNetV2); PLN (dataset de intenções, pré-processamento e modelos); módulo de decisão (base de
+> conhecimento e regras); integração, app Streamlit e testes; experimentos, análise de erros e artigo.
 
 **Artigo (Overleaf):** `<COLE_AQUI_O_LINK_DO_OVERLEAF>` · fonte LaTeX em [`artigo/ecosort_artigo.tex`](artigo/ecosort_artigo.tex) · PDF: `artigo/ecosort_artigo.pdf` (após compilar).
 

@@ -8,7 +8,7 @@
 ## Como publicar no Overleaf
 1. No Overleaf: **New Project → Upload Project** e envie um `.zip` com `ecosort_artigo.tex` e a pasta `figuras/`.
 2. Compilador: **pdfLaTeX** (padrão). A classe `IEEEtran` já vem instalada no Overleaf.
-3. Preencha os **nomes completos, curso e e-mails** no bloco `\author` (linhas marcadas com `PREENCHER`).
+3. Preencha o **curso e os e-mails** (os nomes já estão) no bloco `\author` (linhas marcadas com `PREENCHER`).
 4. Confira se o PDF ficou com **no máximo 6 páginas** (estimativa: 4–5 páginas).
 5. **Share → Turn on link sharing → link de visualização (view only)** e cole o link aqui e no `README.md` principal.
 6. Baixe o PDF e salve como `artigo/ecosort_artigo.pdf`.
