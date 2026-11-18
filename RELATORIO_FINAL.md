@@ -11,7 +11,8 @@
 | App Streamlit funcional | ✅ | `app.py` iniciado com `streamlit run`, sem erros no log; testado no navegador com upload de imagem (lata → Metal 60,8% → regra R18 → lixeira amarela) |
 | Testes pytest passando | ✅ | 37 testes passando (`python -m pytest`) |
 | 10+ exemplos de entrada/saída e análise de erros | ✅ | 14 casos em `resultados/exemplos/` (`exemplos.md`, `exemplos.json`, `painel_exemplos.png`, `imagens/`); `resultados/analise_erros.md` |
-| README completo com métricas reais | ✅ | `README.md` |
+| README completo com métricas reais | ✅ | `README.md` (inclui público-alvo, objetivos, justificativa do aprendizado supervisionado, origem/licença/limpeza dos dados e integrantes com responsabilidades) |
+| Artigo científico (IEEE, LaTeX) | ✅ (falta compilar no Overleaf) | `artigo/ecosort_artigo.tex` + `artigo/figuras/` — ver `artigo/README.md` |
 | DECISOES.md e RELATORIO_FINAL.md | ✅ | este arquivo e `DECISOES.md` (29 decisões) |
 
 Extras: notebooks `notebooks/01_treino_modelos.ipynb` e `notebooks/02_analise_resultados.ipynb` (este executado, com saídas);
@@ -83,4 +84,5 @@ Na pasta `ecosort/`:
 
 ## 6. Pendências para a equipe
 - Preencher nomes/matrículas dos integrantes e o link do Overleaf no `README.md` e em `artigo/README.md`.
-- Escrever o artigo usando os números e gráficos de `resultados/`.
+- Compilar `artigo/ecosort_artigo.tex` no Overleaf, preencher os autores, conferir o limite de 6 páginas e salvar o PDF em `artigo/`.
+- Preencher a coluna de responsabilidades dos integrantes no `README.md`.

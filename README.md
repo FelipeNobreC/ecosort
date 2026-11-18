@@ -2,13 +2,18 @@
 
 Projeto final da disciplina de **Inteligência Artificial — AFYA/UNIMA**.
 
-## Integrantes
-- `<Nome do integrante 1>` — `<matrícula>`
-- `<Nome do integrante 2>` — `<matrícula>`
-- `<Nome do integrante 3>` — `<matrícula>`
-- `<Nome do integrante 4>` — `<matrícula>`
+**Tema:** Projeto B — Identificação e classificação de resíduos.
 
-**Artigo (Overleaf):** `<COLE_AQUI_O_LINK_DO_OVERLEAF>` — veja também [`artigo/`](artigo/).
+## Integrantes
+| Nome completo | Matrícula | Responsabilidades |
+|---|---|---|
+| `<Nome completo 1>` | `<matrícula>` | `<ex.: Visão computacional — dados, treino e avaliação da MobileNetV2>` |
+| `<Nome completo 2>` | `<matrícula>` | `<ex.: PLN — dataset de intenções, pré-processamento e modelos>` |
+| `<Nome completo 3>` | `<matrícula>` | `<ex.: Módulo de decisão — base de conhecimento e regras>` |
+| `<Nome completo 4>` | `<matrícula>` | `<ex.: Integração, app Streamlit e testes>` |
+| `<Nome completo 5>` | `<matrícula>` | `<ex.: Experimentos, análise de erros e artigo>` |
+
+**Artigo (Overleaf):** `<COLE_AQUI_O_LINK_DO_OVERLEAF>` · fonte LaTeX em [`artigo/ecosort_artigo.tex`](artigo/ecosort_artigo.tex) · PDF: `artigo/ecosort_artigo.pdf` (após compilar).
 
 ---
 
@@ -17,6 +22,13 @@ O descarte incorreto de resíduos contamina a coleta seletiva e reduz a reciclag
 **em qual lixeira** colocar um objeto, **se ele é reciclável**, **como prepará-lo** ou **onde entregá-lo**.
 O EcoSort recebe uma **foto** do resíduo e uma **pergunta em português** e responde de forma contextualizada,
 seguindo o padrão de cores da coleta seletiva brasileira (Resolução CONAMA 275/2001).
+
+**Público-alvo:** cidadãos em geral que separam o lixo em casa, no trabalho ou na universidade e têm dúvidas
+pontuais de descarte; secundariamente, escolas e condomínios que queiram uma ferramenta de educação ambiental.
+
+**Objetivos:** (1) classificar o material do resíduo a partir de uma foto; (2) entender perguntas livres em
+português; (3) combinar as duas informações numa orientação correta e explicável, reconhecendo quando não tem
+certeza; (4) avaliar cada módulo com métricas adequadas e documentar erros e limitações.
 
 ## 2. Fluxo funcional
 1. O usuário envia uma foto do resíduo.
@@ -124,6 +136,7 @@ Todos os comandos são executados **na raiz do projeto** (`ecosort/`).
 | 4. Rodar os testes | `python -m pytest -v` | ~10 s |
 | 5. Gerar exemplos do fluxo | `python -m scripts.gerar_exemplos` | ~10 s |
 | 6. Gerar análise de erros | `python -m scripts.analise_erros` | ~10 s |
+| 6b. Gerar diagrama e figuras do artigo | `python -m scripts.diagrama_arquitetura` | ~5 s |
 | 7. Abrir o app | `streamlit run app.py` → http://localhost:8501 | — |
 
 > Os modelos treinados já estão em `modelos/`; para **só usar o app** basta instalar e rodar os passos 4 e 7.
@@ -142,6 +155,26 @@ print(r["visao"], r["pln"], r["decisao"]["regra_id"], r["decisao"]["resposta"], 
 | Visão | TrashNet (2.527 imagens, 6 classes) — split estratificado 70/15/15 (1.768 / 379 / 380), seed 42 | MobileNetV2 (ImageNet). Fase 1: base congelada, 6 épocas, lr 1e-3. Fase 2: fine-tuning dos 5 últimos blocos, 10 épocas, lr 1e-4, cosine. CE com pesos por classe + label smoothing 0,1. Augmentation só no treino. |
 | PLN | `dados/intencoes.csv`: 335 frases PT-BR próprias (5 intenções, com gírias e erros de digitação) — split 70/15/15 (234 / 50 / 51) | TF-IDF (uni+bigramas) + Regressão Logística (C=3); baseline Multinomial Naive Bayes (α=0,5). Hiperparâmetros escolhidos na validação. |
 | Decisão | `dados/regras_descarte.json` (6 materiais, cores CONAMA) | 29 regras SE-ENTÃO com prioridade (R01–R05 + R10–R33) |
+
+### Por que aprendizado supervisionado?
+As duas tarefas de aprendizado são **classificação com classes conhecidas e fixas** (6 materiais; 5 intenções),
+e há dados rotulados disponíveis (TrashNet) ou fáceis de rotular (frases escritas pela equipe). Abordagens não
+supervisionadas (agrupamento) não garantiriam que os grupos coincidissem com as categorias da coleta seletiva, e
+aprendizado por reforço não se aplica (não há ambiente nem recompensa sequencial). Na visão, usamos
+**transfer learning** porque 2,5 mil imagens são poucas para treinar uma CNN do zero; no PLN, **TF-IDF +
+Regressão Logística** é um modelo linear forte e interpretável para textos curtos (média de 4,5 palavras por
+frase) e poucos exemplos, treinável em segundos em CPU.
+
+### Origem, permissões e preparação dos dados
+| Dado | Origem e permissão | Limpeza e preparação |
+|---|---|---|
+| Imagens | **TrashNet** (Yang & Thung, 2016), licença **MIT** — uso, cópia e redistribuição permitidos com atribuição. Baixado do espelho oficial no Hugging Face (`garythung/trashnet`). | Extraídos só os `.jpg` das 6 pastas de classe (descartados metadados `__MACOSX` e arquivos não-imagem); 2.527 imagens válidas; split estratificado 70/15/15 com seed 42; resize 224×224 e normalização ImageNet; augmentation só no treino. Distribuição em `resultados/graficos/dados_distribuicao_classes.png`. |
+| Frases | **Autoria da própria equipe** (`dados/intencoes.csv`, 335 frases); não contém dados pessoais. | Minúsculas, remoção de acentos e pontuação, stopwords próprias; verificação de duplicatas (0); split estratificado 70/15/15 com seed 42. |
+| Regras | Elaboradas pela equipe com base na Resolução CONAMA 275/2001 e na PNRS (Lei 12.305/2010). | — |
+
+![Distribuição das classes](resultados/graficos/dados_distribuicao_classes.png)
+
+A classe `trash` é minoritária (137 imagens, 5,4%), o que motivou o uso de pesos por classe na função de perda.
 
 ## 9. Resultados (execução real, conjunto de teste)
 

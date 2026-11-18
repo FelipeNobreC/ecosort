@@ -84,12 +84,36 @@ def gerar_split(seed: int = SEED_PADRAO) -> pd.DataFrame:
     return df
 
 
+def plotar_distribuicao(df: pd.DataFrame) -> None:
+    """Análise inicial: nº de imagens por classe em cada conjunto (barras empilhadas)."""
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    tab = pd.crosstab(df["classe"], df["conjunto"]).reindex(CLASSES)[["treino", "validacao", "teste"]]
+    ax = tab.plot(kind="bar", stacked=True, figsize=(7, 4), color=["#2e7d32", "#81c784", "#c8e6c9"],
+                  edgecolor="black", linewidth=0.4)
+    for i, total in enumerate(tab.sum(axis=1)):
+        ax.text(i, total + 5, str(total), ha="center", fontsize=9)
+    ax.set_title("TrashNet — imagens por classe e conjunto (split 70/15/15)")
+    ax.set_xlabel("")
+    ax.set_ylabel("Nº de imagens")
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+    destino = RAIZ / "resultados" / "graficos" / "dados_distribuicao_classes.png"
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    plt.savefig(destino, dpi=120)
+    plt.close()
+
+
 def main() -> None:
     if not all((DIR_BRUTO / c).exists() and any((DIR_BRUTO / c).iterdir()) for c in CLASSES):
         extrair(baixar_zip())
     else:
         print("Imagens já presentes em", DIR_BRUTO)
     df = gerar_split()
+    plotar_distribuicao(df)
     print("\nDistribuição por conjunto e classe:")
     print(pd.crosstab(df["classe"], df["conjunto"], margins=True))
     print(f"\nSplit salvo em {CSV_SPLIT}")
