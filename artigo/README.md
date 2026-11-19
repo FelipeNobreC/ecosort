@@ -2,7 +2,7 @@
 
 - **Fonte LaTeX:** [`ecosort_artigo.tex`](ecosort_artigo.tex) (IEEE Conference, duas colunas, português)
 - **Figuras:** [`figuras/`](figuras/) (geradas por `python -m scripts.diagrama_arquitetura`, que copia os gráficos de `resultados/graficos/`)
-- **Link do Overleaf:** `<COLE_AQUI_O_LINK_DO_OVERLEAF>`
+- **Link do Overleaf:** [https://www.overleaf.com/project/6afe3fddc271eb77c696c25c/share#33d6de9d31e8ec5e42b3729d1e1aa3b5b4f2eef7ed2fbebe](https://www.overleaf.com/project/6afe3fddc271eb77c696c25c/share#33d6de9d31e8ec5e42b3729d1e1aa3b5b4f2eef7ed2fbebe)
 - **PDF final:** salvar aqui como `ecosort_artigo.pdf` depois de compilar.
 
 ## Como publicar no Overleaf

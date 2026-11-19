@@ -11,7 +11,7 @@ Projeto final da disciplina de **Inteligência Artificial — AFYA/UNIMA**.
 - Gabriela Vilela Berto
 - Felipe José Nobre Carlos
 
-**Artigo (Overleaf):** `<COLE_AQUI_O_LINK_DO_OVERLEAF>` · fonte LaTeX em [`artigo/ecosort_artigo.tex`](artigo/ecosort_artigo.tex) · PDF: `artigo/ecosort_artigo.pdf` (após compilar).
+**Artigo (Overleaf):** [https://www.overleaf.com/project/6afe3fddc271eb77c696c25c/share#33d6de9d31e8ec5e42b3729d1e1aa3b5b4f2eef7ed2fbebe](https://www.overleaf.com/project/6afe3fddc271eb77c696c25c/share#33d6de9d31e8ec5e42b3729d1e1aa3b5b4f2eef7ed2fbebe) · fonte LaTeX em [`artigo/ecosort_artigo.tex`](artigo/ecosort_artigo.tex) · PDF: `artigo/ecosort_artigo.pdf` (após compilar).
 
 ---
 

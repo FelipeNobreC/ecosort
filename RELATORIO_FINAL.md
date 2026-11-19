@@ -83,5 +83,4 @@ Na pasta `ecosort/`:
    Acesse http://localhost:8501, envie uma foto (há exemplos em `dados/exemplos/`), digite a pergunta e clique em **Analisar**.
 
 ## 6. Pendências para a equipe
-- Preencher o link do Overleaf no `README.md` e em `artigo/README.md`.
 - Compilar `artigo/ecosort_artigo.tex` no Overleaf, preencher os autores, conferir o limite de 6 páginas e salvar o PDF em `artigo/`.
