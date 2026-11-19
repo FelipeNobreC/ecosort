@@ -5,17 +5,11 @@ Projeto final da disciplina de **Inteligência Artificial — AFYA/UNIMA**.
 **Tema:** Projeto B — Identificação e classificação de resíduos.
 
 ## Integrantes
-| Nome completo | Matrícula | Responsabilidades |
-|---|---|---|
-| Nícollas Inácio Santos Ferreira | `<matrícula>` | `<a definir>` |
-| Jhuze Victhor Alves Sarmento | `<matrícula>` | `<a definir>` |
-| Maria Júlia Feitosa | `<matrícula>` | `<a definir>` |
-| Gabriela Vilela Berto | `<matrícula>` | `<a definir>` |
-| Felipe José Nobre Carlos | `<matrícula>` | `<a definir>` |
-
-> Frentes de trabalho do projeto, para distribuir nas responsabilidades: visão computacional (dados, treino e
-> avaliação da MobileNetV2); PLN (dataset de intenções, pré-processamento e modelos); módulo de decisão (base de
-> conhecimento e regras); integração, app Streamlit e testes; experimentos, análise de erros e artigo.
+- Nícollas Inácio Santos Ferreira
+- Jhuze Victhor Alves Sarmento
+- Maria Júlia Feitosa
+- Gabriela Vilela Berto
+- Felipe José Nobre Carlos
 
 **Artigo (Overleaf):** `<COLE_AQUI_O_LINK_DO_OVERLEAF>` · fonte LaTeX em [`artigo/ecosort_artigo.tex`](artigo/ecosort_artigo.tex) · PDF: `artigo/ecosort_artigo.pdf` (após compilar).
 
